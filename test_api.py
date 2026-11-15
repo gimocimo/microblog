@@ -54,6 +54,7 @@ class UserAPICase(unittest.TestCase):
         self.assertEqual(data['post_count'], 1)
         self.assertEqual(data['follower_count'], 1)
         self.assertEqual(data['following_count'], 1)
+        self.assertNotIn('email', data)
         self.assertEqual(
             data['_links']['avatar'],
             'https://www.gravatar.com/avatar/'
